@@ -1,24 +1,30 @@
-.main {
+.catalog {
+  --column-count: 1;
+
   display: grid;
-  grid-template-columns:  repeat(1, 200px);
+  grid-template-columns: repeat(var(--column-count), 200px);
   gap: 46px 48px;
+  padding: 50px 40px;
   justify-content: center;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 488px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
+  .catalog {
+    --column-count: 2;
   }
 }
 
 @media (min-width: 768px) {
-  main {
-    grid-template-columns: repeat(3, 1fr);
+  .catalog {
+    --column-count: 3;
   }
 }
 
 @media (min-width: 1024px) {
-  main {
-    grid-template-columns: repeat(4, 1fr);
+  .catalog {
+    --column-count: 4;
   }
 }
